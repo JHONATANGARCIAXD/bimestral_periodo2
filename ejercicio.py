@@ -31,8 +31,13 @@ while cheque !=0:
     moneda=(moneda-moneda%100)//100
     moneda=moneda%100
     gasto= (moneda+ billete2000 + billete10000)
-    usuarios=usuarios +1 
+    monedas=moneda
+    billetes1=billete10000
+    billetes2=billete2000
+    usuarios1=usuarios +1 
     cheque=0
+
+
    
 
    
@@ -80,11 +85,19 @@ while cheque !=0:
     moneda=(moneda-moneda%100)//100
     moneda=moneda%100
     gasto= (moneda+ billete2000 + billete10000)
-    usuarios=usuarios +1 
+    usuarios1=usuarios1 + 1 
+    monedas=moneda + moneda
+    billetes1=billetes1+ billete10000
+    billetes2=billetes2 + billete2000
     cheque=0
    
 
+
+   
+
 # ouput 
+
+
 print("")
 print("Cantidad de monedas de 100 :", moneda)
 print("")
@@ -92,8 +105,11 @@ print("Cantiddad de Billetes de 10000:",billete10000)
 print("")
 print("Cantidad de Billetes de 2000:",billete2000)
 print("")
-print("Los cheques descambiados fueron: ",usuarios)
+print("AL final del dia se gastaron " + str(billete10000) + " Billetes de 10000, " + str(monedas) + " Monedas de 100 y " + str(billete2000) + " Billetes de 2000")
 print("")
+print("Los cheques descambiados fueron: ",usuarios1)
+print("")
+
 
     
 
